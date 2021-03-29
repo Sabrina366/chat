@@ -36,12 +36,12 @@ async def websockets(req, ws):
 async def messages(req):
   return res.json(await get_messages())
 
-app.static('/', './dist')
+app.static('/', './frontend')
 
 @app.exception(NotFound)
 async def ignore_404s(request, exception):
-    return await res.file('./dist/index.html')
+    return await res.file('./frontend/app.vue')
 
 if __name__ == '__main__':
-  app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
-
+  #app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
+    app.run(port=5000)
