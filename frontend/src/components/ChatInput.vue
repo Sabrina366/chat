@@ -1,10 +1,10 @@
 <template>
   <div>
       <h1>Chat</h1>
-        <form>
+        <form @submit.prevent="displayMessage">
             <input id="username" type="text" placeholder="name">
             <input id="new-message" type="text" placeholder="message..">
-            <button @click="sendMessage">send</button>
+            <button type="submit">send</button>
         </form>
   </div>
 </template>
@@ -17,6 +17,18 @@ export default {
       text: '',
       timestamp: Date.now()
     }
+  },
+  methods: {
+    displayMessage(){
+      let newMessage = {
+        sender: this.sender,
+        text: this.text,
+        timestamp: this.timestamp
+      }
+
+      this.$store.commit('appendMessage', newMessage)
+
+      
   }
 
 }

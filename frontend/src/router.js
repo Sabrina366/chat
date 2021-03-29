@@ -4,8 +4,10 @@ const routes = [
    {
     name: 'Chat',
     path: '/',
+    component: 'Chat'
 
-   } 
+   },
+  
 ]
 
 const router = createRouter({

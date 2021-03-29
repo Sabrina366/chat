@@ -40,7 +40,7 @@ app.static('/', './frontend')
 
 @app.exception(NotFound)
 async def ignore_404s(request, exception):
-    return await res.file('./frontend/app.vue')
+    return await res.file('./frontend/store.js')
 
 if __name__ == '__main__':
   #app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))

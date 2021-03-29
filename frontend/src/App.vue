@@ -1,20 +1,16 @@
 <template>
   <div>
-    <Chat />
+    <Nav/>
     <router-view/>
   </div>
 </template>
 
 <script>
-import Chat from './views/Chat.vue'
-
+import Nav from './components/Nav.vue'
 export default {
   name: 'App',
   components: {
-    Chat,
+    Nav,
   },
-  data: function(){
-    return
-  }
 }
 </script>

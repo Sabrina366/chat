@@ -5,13 +5,22 @@ const state = {
 
     messages: [
 
+      {
+        sender: 'Olaf',
+        text: 'Hi',
+        timestamp: '7728572'
+      }
+
     ]
 }
 
 const mutations = {
-
-  
-
+  loadMessages(state, newMessageList){
+    state.messages = newMessageList
+  },
+  appendMessage(state, messageToAppend){
+    state.messages.push(messageToAppend)
+  }
 }
 
 const actions = {
@@ -36,7 +45,6 @@ const actions = {
     
       ws.onopen = () => console.log('connected');
     
-      // try to reconnect every second
       ws.onclose = () => {
         console.log('disconnected');
     
