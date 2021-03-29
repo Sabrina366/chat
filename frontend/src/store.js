@@ -5,12 +5,6 @@ const state = {
 
     messages: [
 
-      {
-        sender: 'Olaf',
-        text: 'Hi',
-        timestamp: '7728572'
-      }
-
     ]
 }
 

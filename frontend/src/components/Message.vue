@@ -1,8 +1,7 @@
 <template>
     <div>
-     <h3>{{ message.sender }}</h3>
-     <h3>{{ message.text }}</h3>
-     <h3>{{ message.timestamp }}</h3>
+     <p>{{ message.sender }}  {{ message.text }} </p>
+     <p>{{ new Date(message.timestamp).toString() }}</p>
     </div>
 </template>
 
@@ -16,6 +15,10 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 
+div{
+  margin: 0 15%;
+  background-color: lavender;
+}
 </style>

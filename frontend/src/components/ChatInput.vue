@@ -2,8 +2,8 @@
   <div>
       <h1>Chat</h1>
         <form @submit.prevent="displayMessage">
-            <input id="username" type="text" placeholder="name">
-            <input id="new-message" type="text" placeholder="message..">
+            <input v-model="sender" type="text" placeholder="name">
+            <input v-model="text" type="text" placeholder="message..">
             <button type="submit">send</button>
         </form>
   </div>
@@ -31,6 +31,7 @@ export default {
       
   }
 
+}
 }
 </script>
 

@@ -36,11 +36,11 @@ async def websockets(req, ws):
 async def messages(req):
   return res.json(await get_messages())
 
-app.static('/', './frontend')
+app.static('/', './frontend/scr')
 
 @app.exception(NotFound)
 async def ignore_404s(request, exception):
-    return await res.file('./frontend/store.js')
+    return await res.file('./frontend/index.html')
 
 if __name__ == '__main__':
   #app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))

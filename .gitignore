@@ -136,3 +136,7 @@ dmypy.json
 #
 settings.json
 routes.rest
+# vscode
+.vscode
+
+training_1
