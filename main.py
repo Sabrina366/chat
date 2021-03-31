@@ -4,6 +4,8 @@ from sanic.exceptions import NotFound
 from sanic.websocket import ConnectionClosed
 import json
 import copy
+from bot.functions import *
+
 
 app = Sanic('chat')    
 
@@ -36,7 +38,19 @@ async def websockets(req, ws):
 async def messages(req):
   return res.json(await get_messages())
 
-app.static('/', './frontend/scr')
+@app.post('/rest/predict')
+async def get_prediction(req):
+  pred = req.json
+
+  prediction = predict(pred['sentence'])
+  print(prediction)
+  return res.json(prediction)
+
+
+prediction = predict("hello")
+print(prediction)
+
+app.static('/', './frontend')
 
 @app.exception(NotFound)
 async def ignore_404s(request, exception):

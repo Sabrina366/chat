@@ -3,9 +3,12 @@ let ws;
 
 const state = {
 
-    messages: [
+    prediction: ''
+      
 
-    ]
+    
+    
+    
 }
 
 const mutations = {
@@ -14,7 +17,13 @@ const mutations = {
   },
   appendMessage(state, messageToAppend){
     state.messages.push(messageToAppend)
+  },
+
+  predictSentence(state, prediction){
+    state.prediction = prediction
+
   }
+  
 }
 
 const actions = {
