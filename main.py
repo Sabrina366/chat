@@ -5,9 +5,9 @@ from sanic.websocket import ConnectionClosed
 import json
 import copy
 
-app = Sanic('chat')    
+app = Sanic('chat')   
 
-clients = set()
+""" clients = set()
 
 async def broadcast(message):
   for client in copy.copy(clients):
@@ -30,17 +30,13 @@ async def websockets(req, ws):
 
     data = json.dumps(data)
 
-    await broadcast(data)
+    await broadcast(data) 
 
-@app.get('/rest/messages')
-async def messages(req):
-  return res.json(await get_messages())
-
-app.static('/', './frontend/scr')
+app.static('/', './frontend')
 
 @app.exception(NotFound)
 async def ignore_404s(request, exception):
-    return await res.file('./frontend/index.html')
+    return await res.file('./frontend') """
 
 if __name__ == '__main__':
   #app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))

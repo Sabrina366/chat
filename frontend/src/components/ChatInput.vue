@@ -1,6 +1,5 @@
 <template>
   <div>
-      <h1>Chat</h1>
         <form @submit.prevent="displayMessage">
             <input v-model="sender" type="text" placeholder="name">
             <input v-model="text" type="text" placeholder="message..">
@@ -27,14 +26,26 @@ export default {
       }
 
       this.$store.commit('appendMessage', newMessage)
-
-      
   }
-
 }
 }
 </script>
 
-<style>
-
+<style scoped>
+  form {
+  max-width: 350px;
+  display: grid;
+  grid-template-columns: 80px 1fr 40px;
+  column-gap: 5px;
+  margin: auto;
+  }
+  input{
+    background-color: snow;
+    border-style: none;
+  }
+  button{
+    border-style: none;
+    background-color:silver;
+    border-radius: 5px;
+  }
 </style>
