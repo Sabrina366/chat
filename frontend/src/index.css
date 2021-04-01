@@ -1,0 +1,45 @@
+body{
+  background: #a0b2ec;
+  color: #444;
+}
+.app-container .message{
+  width: 90%;
+  max-width: 960px;
+  min-width: 960px;
+  max-height: 500px;
+  min-height: 500px;
+  overflow: auto;
+  margin: 80px 25% 0px 25%;
+  border-radius: 20px;
+  box-shadow: 2px 4px 6px rgba(28, 6, 49, 0.1);
+  background: white;
+}
+.error{
+  color: #ff3f80;
+  font-size: 14px;
+}
+button{
+  text-decoration: none;
+  background: #5ae4ca;
+  color: white;
+  font-weight: bold;
+  border: 0;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+
+
+/* #app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+  
+* {
+  box-sizing: border-box;
+    background-color: lightblue;
+} */
