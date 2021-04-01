@@ -5,15 +5,14 @@
       <textarea
       placeholder="Skriv ditt meddelande och klicka enter för att skicka"
       v-model="text"
-      @keypress.enter.prevent="displayMessage"
+      
+      @keypress.enter.prevent="predict"
+      
       class="chat-input"
       ></textarea>
+      
   </form>
-        <!-- <form @submit.prevent="displayMessage">
-            <input class="sender" v-model="sender" type="text" placeholder="name">
-            <input class="message" v-model="text" type="text" placeholder="message..">
-            <button type="submit" class="send-btn">send</button>
-        </form> -->
+  
   </div>
 </template>
 
@@ -21,22 +20,52 @@
 export default {
   data(){
     return{
-      sender: '',
+      
       text: '',
-      timestamp: Date.now()
+      
+      
+      
+      
+      
     }
   },
+  
   methods: {
-    displayMessage(){
+    
+  async predict() {
+      let pred = {
+        sentence: this.text,
+      };
+
+      let res = await fetch("/rest/predict", {
+        method: "POST",
+        body: JSON.stringify(pred),
+      });
+
+      let prediction = await res.json();
+
       let newMessage = {
-        sender: this.sender,
         text: this.text,
-        timestamp: this.timestamp
+        timestamp: Date.now(),
+        prediction: prediction
       }
 
-      this.$store.commit('appendMessage', newMessage)
+      this.$store.commit("appendMessage", newMessage);
+      console.log(prediction);
+      return prediction
+      
+
+      
+    },
+    
+  
+  
+    
+  
+  
+  
   }
-}
+
 }
 </script>
 

@@ -3,7 +3,10 @@ let ws;
 
 const state = {
 
-    prediction: ''
+
+  messages: [],
+
+  prediction: []
       
 
     
@@ -22,7 +25,9 @@ const mutations = {
   predictSentence(state, prediction){
     state.prediction = prediction
 
-  }
+  },
+  
+  
   
 }
 
@@ -34,7 +39,13 @@ const actions = {
       messages = await messages.json()
 
       store.commit('loadMessages', messages)
-    },
+    }
+
+    
+
+
+    
+    
     
     
 

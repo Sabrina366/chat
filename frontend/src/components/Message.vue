@@ -1,18 +1,41 @@
 <template>
     <div class="ChatWindow">
-      <div class="messsages" ref="mes">
-        <span class="text">{{ message.text }}</span>
+      <div class="messages" ref="mes">
+        <span class="text">You: {{ message.text }}</span>
+        <span class="time">{{ new Date(message.timestamp).toString() }}</span>
+      </div>
+      <br>
+      <div v-if="displayBot" class="messages" ref="mes">
+        
+        <span>Bot: {{ message.prediction }}</span>
         <span class="time">{{ new Date(message.timestamp).toString() }}</span>
       </div>
     </div>
 </template>
 
 <script>
+
 export default {
-  props: ['message'],
-  methods: {
- 
+  data() {
+    return{
+      displayBot: false
+        
+      
+
+    }
   },
+
+  props: ['message'],
+  
+  
+  mounted() {
+    setTimeout(()=>{
+      this.displayBot = true
+
+    }, 1000)
+  },
+  
+    
 
 }
 

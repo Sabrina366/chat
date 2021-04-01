@@ -3,7 +3,7 @@ import App from './App.vue'
 import './index.css'
 import router from './router'
 import store from './store'
-/* let ws; 
+ /*let ws; 
 
 async function connect(){
     console.log('connecting');
@@ -12,7 +12,7 @@ async function connect(){
     
     ws.onmessage = message => {
       let data = JSON.parse(message.data)
-      appendMessage(data)
+      store.commit("appendMessage", data)
     }
   
     ws.onopen = () => console.log('connected');

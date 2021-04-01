@@ -9,7 +9,7 @@ from bot.functions import *
 
 app = Sanic('chat')   
 
-""" clients = set()
+'''clients = set()
 
 async def broadcast(message):
   for client in copy.copy(clients):
@@ -27,12 +27,12 @@ async def websockets(req, ws):
     data = json.loads(data)
 
     data['id'] = await post_message(data)
-
+    data['prediction'] = predict(data['sentence'])
     print(data)
 
     data = json.dumps(data)
 
-    await broadcast(data) 
+    await broadcast(data) '''
 
 @app.get('/rest/messages')
 async def messages(req):
@@ -54,7 +54,7 @@ app.static('/', './frontend')
 
 @app.exception(NotFound)
 async def ignore_404s(request, exception):
-    return await res.file('./frontend') """
+    return await res.file('./frontend') 
 
 if __name__ == '__main__':
   #app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
