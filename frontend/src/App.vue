@@ -11,6 +11,11 @@
     </div>
 
     <!-- <router-view/> -->
+  <div>
+    <Prediciton/>
+    <p>sentence: {{ prediction }} </p>
+    <Chat/>
+    <router-view/>
   </div>
 </template>
 
@@ -18,18 +23,26 @@
 import Chat from './views/Chat.vue'
 import ChatBot from './views/ChatBot.vue'
 import { ref } from 'vue'
+import Prediciton from './components/PredicitionTest.vue'
 export default {
   name: 'App',
   components: {
     // Nav,
     Chat,
     ChatBot,
+    Prediciton
     
   },
+  computed: {
+    prediction(){
+      return this.$store.state.prediction
+    }
+  },  
   setup() {
     const visaChat = ref(true)
 
     return { visaChat }
+
   }
 }
 </script>
