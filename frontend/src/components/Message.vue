@@ -1,8 +1,9 @@
 <template>
-    <div>
-     <p class="sender">{{ message.sender }}</p> 
-     <p class="text">{{ message.text }}</p>
-     <p class="time">{{ new Date(message.timestamp).toString() }}</p>
+    <div class="ChatWindow">
+      <div class="messsages" ref="mes">
+        <span class="text">{{ message.text }}</span>
+        <span class="time">{{ new Date(message.timestamp).toString() }}</span>
+      </div>
     </div>
 </template>
 
@@ -11,41 +12,35 @@ export default {
   props: ['message'],
   methods: {
  
+  },
 
-  
-  }
 }
 
 </script>
 
-<style scoped>
-section{
-  background-color:snow;
+<style >
+
+ .ChatWindow{
+    background: #fafafa;
+    padding: 30px 20px;
+
 }
 
-div{
-  max-width: 350px;
-  padding: 3px;
-  margin: auto;
-  margin-top: 10px;
-  border-radius: 10px;
-  background-color:lavenderblush;
-}
-div p{
-  margin: 0%;
-  background-color:lavenderblush;
+.messages{
+  max-height: 300px;
+  overflow: auto;
 }
 
-.sender{
-  font-size: 0.7em;
-  float:left;
+.time {
+    display: block;
+    color: #999;
+    font-size: 12px;
+    margin-bottom: 4px;
 }
+
 .text{
-  font-size: 0.8em;
-  height: auto;
-  padding-bottom: 5px;
+    /* max-height: 400px;
+    overflow: auto; */
 }
-.time{
-  font-size: 0.4em;
-}
+
 </style>

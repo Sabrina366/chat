@@ -7,7 +7,9 @@
   },
   "dependencies": {
     "date-fns": "^2.19.0",
-    "vue": "^3.0.4"
+    "vue": "^3.0.4",
+    "vue-router": "^4.0.5",
+    "vuex": "^4.0.0"
   },
   "devDependencies": {
     "vite": "^1.0.0-rc.13",
