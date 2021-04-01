@@ -7,6 +7,7 @@
       v-model="text"
       @keypress.enter.prevent="displayMessage"
       class="chat-input"
+      
       ></textarea>
   </form>
         <!-- <form @submit.prevent="displayMessage">

@@ -7,14 +7,13 @@
     </div>
     <div class="input">
     <ChatInput/>
-    <!-- <NewChatForm /> -->
     </div>
   </div>
   </main>
 </template>
 
 <script>
-import NewChatForm from '../components/NewChatForm.vue'
+
 import Message from "../components/Message.vue";
 import ChatInput from "../components/ChatInput.vue";
 
@@ -23,7 +22,6 @@ export default {
   components:{
     Message,
     ChatInput,
-    NewChatForm,
   
   },
    computed: {

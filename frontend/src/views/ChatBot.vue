@@ -1,7 +1,7 @@
 <template>
     <main>
   <form @submit.prevent="voicechat">
-      <textarea class="voice-txt" placeholder="Klicka för att starta " ></textarea>
+      <img src="../assets/vivbien180300055.jpg" alt="bot pic" class="bot-pic">
       <div>
       <button type="submit" class="voice-btn">Tala</button>
       </div>
@@ -20,6 +20,26 @@ export default {
 </script>
 
 <style scoped>
+
+.bot-pic{
+    /* margin-left: 30%; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    max-width: 300px;
+    max-height: 300px;
+    
+}
+.voice-btn{
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
 /* form{
     margin: 20px;
     align-content: center;

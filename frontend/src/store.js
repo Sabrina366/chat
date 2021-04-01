@@ -3,6 +3,8 @@ let ws;
 
 const state = {
 
+    messages: [],
+    
     prediction: ''
       
 
