@@ -3,15 +3,14 @@
     <!-- <Nav/> -->
     <div v-if="visaChat" class="toggel-container">
     <Chat />
-     <p>Vill du tala med <span @click="visaChat = false" class="toggel"> boten?</span></p>
+     <p style="margin-left: 26%">Vill du tala med <span @click="visaChat = false" class="toggel"> boten?</span></p>
     </div>
     <div v-else class="toggel-container">
     <ChatBot />
-    <p>klicka här för att chatta med <span @click="visaChat = true" class="toggel">boten</span></p>
+    <p style="margin-left: 40%">klicka här för att chatta med <span @click="visaChat = true" class="toggel">boten</span></p>
     </div>
 
     <!-- <router-view/> -->
-  
 </template>
 
 <script>
@@ -46,6 +45,10 @@ export default {
   .toggel{
     font-weight: bold;
     cursor: pointer;
+  }
+
+  .toggle2{
+    margin-left: 25%;
   }
 
   .app{

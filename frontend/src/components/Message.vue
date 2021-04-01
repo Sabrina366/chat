@@ -9,12 +9,12 @@
         
         <span>Bot: {{ message.prediction }}</span>
         <span class="time">{{ new Date(message.timestamp).toString() }}</span>
+      
       </div>
     </div>
 </template>
 
 <script>
-
 export default {
   data() {
     return{
@@ -59,11 +59,6 @@ export default {
     color: #999;
     font-size: 12px;
     margin-bottom: 4px;
-}
-
-.text{
-    /* max-height: 400px;
-    overflow: auto; */
 }
 
 </style>

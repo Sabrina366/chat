@@ -9,6 +9,7 @@
       @keypress.enter.prevent="predict"
       
       class="chat-input"
+      
       ></textarea>
       
   </form>
