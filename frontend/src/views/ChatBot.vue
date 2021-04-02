@@ -1,41 +1,53 @@
 <template>
     <main>
-  <form @submit.prevent="voicechat">
-      <img src="../assets/vivbien180300055.jpg" alt="bot pic" class="bot-pic">
-      <div>
-      <button type="submit" class="voice-btn">Tala</button>
-      </div>
-  </form>
-  </main>
+        <div class="robot-face-container">
+            <robot-face ref="myChild">>
+        </div>
+        <form @submit.prevent="voicechat">
+            <!-- <img src="../assets/vivbien180300055.jpg" alt="bot pic" class="bot-pic"> -->
+            <div>
+                <button @click="$refs.myChild.botListens()" type="submit" class="voice-btn">Tala</button>
+            </div>
+        </form>
+    </main>
 </template>
 
 <script>
+import RobotFace from "../components/RobotFace.vue";
 
 export default {
-    components: {
-   
-    }
-
-}
+	components: {
+		RobotFace,
+	},
+};
 </script>
 
 <style scoped>
 
-.bot-pic{
-    /* margin-left: 30%; */
-    display: block;
+main {
+    display: flex;
+    height: 90vh;
+    flex-direction: column;
+}
+
+button {
+    display: flex;
+}
+
+.robot-face-container {
+    display: flex;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
     max-width: 300px;
     max-height: 300px;
-    
 }
-.voice-btn{
-    display: block;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
+
+.voice-btn {
+	margin-top: 110px;
+	margin-left: auto;
+	margin-right: auto;
+    display: flex;
 }
 
 
@@ -81,5 +93,4 @@ export default {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 } */
-
 </style>
