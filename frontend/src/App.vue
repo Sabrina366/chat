@@ -16,14 +16,12 @@
 import Chat from './views/Chat.vue'
 import ChatBot from './views/ChatBot.vue'
 import { ref } from 'vue'
-import Prediciton from './components/PredicitionTest.vue'
 export default {
   name: 'App',
   components: {
     // Nav,
     Chat,
     ChatBot,
-    Prediciton
     
   },
   computed: {

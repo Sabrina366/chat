@@ -4,24 +4,28 @@
     <h1 class="h1-chat">Chat</h1>
     <div class="message">
     <Message v-for="(m, index) of messages" :key="index" :message="m" />
+    
     </div>
     <div class="input">
+    
     <ChatInput/>
+    <!-- <NewChatForm /> -->
+    
     </div>
   </div>
   </main>
 </template>
 
 <script>
-
 import Message from "../components/Message.vue";
 import ChatInput from "../components/ChatInput.vue";
-
-
 export default {
   components:{
     Message,
-    ChatInput,
+    ChatInput
+    
+    
+    
   
   },
    computed: {
@@ -30,9 +34,11 @@ export default {
     
       return this.$store.state.messages
       
+    },
+    prediction(){
+      return this.$store.state.prediction
     }
   },
-
 }
 </script>
 
@@ -54,4 +60,3 @@ export default {
   background: white;
 }
 </style>
-
