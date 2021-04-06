@@ -37,7 +37,7 @@ export default {
 				counter++;
 			}, 5000);
 		},
-		botTalks() {
+		botTalks(sentenceLength) {
 			var pupils = document.getElementsByClassName("pupils");
 			var mouth = document.getElementsByClassName("mouth");
 			for (let i = 0; i < pupils.length; i++) {
@@ -54,12 +54,13 @@ export default {
 					mouth[0].classList.add("mouth-two");
 				}
 				counter++;
-				if (counter === 11) {
+				if (counter === Math.round(sentenceLength / 3)) {
+                    mouth[0].classList.remove("mouth-two");
 					clearInterval(i);
 				}
 			}, 200);
 
-			setTimeout(this.endTalk, 4000);
+			setTimeout(this.endTalk, 1000);
 		},
 		botListens() {
 			var pupils = document.getElementsByClassName("pupils");

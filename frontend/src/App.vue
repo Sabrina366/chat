@@ -9,7 +9,7 @@
     <ChatBot />
     <p style="margin-left: 40%">klicka här för att chatta med <span @click="visaChat = true" class="toggel">boten</span></p>
     </div>
-
+  </div>
     <!-- <router-view/> -->
 </template>
 
