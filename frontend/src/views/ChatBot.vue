@@ -78,7 +78,7 @@ export default {
 			let prediction = await res.json();
 
 			let newMessage = {
-				text: this.text,
+				text: pred.sentence.toString(),
 				timestamp: Date.now(),
 				prediction: prediction,
 			};
