@@ -51,27 +51,20 @@ export default {
     
 
 }
-
 </script>
 
 <style >
-
  .ChatWindow{
-    background: #fafafa;
-    padding: 30px 20px;
-
-}
-
+    padding: 10px 20px;
+} 
 .messages{
   max-height: 300px;
   overflow: auto;
-}
-
+} 
 .time {
     display: block;
     color: #999;
     font-size: 12px;
     margin-bottom: 4px;
 }
-
 </style>

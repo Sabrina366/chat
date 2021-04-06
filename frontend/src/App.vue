@@ -3,21 +3,19 @@
     <!-- <Nav/> -->
     <div v-if="visaChat" class="toggel-container">
     <Chat />
-     <p style="margin-left: 26%">Vill du tala med <span @click="visaChat = false" class="toggel"> boten?</span></p>
+     <p style="text-align: center;" >Vill du tala med <span @click="visaChat = false" class="toggel"> boten?</span></p>
     </div>
     <div v-else class="toggel-container">
     <ChatBot />
     <p style="margin-left: 40%">klicka här för att chatta med <span @click="visaChat = true" class="toggel">boten</span></p>
     </div>
   </div>
-    <!-- <router-view/> -->
 </template>
 
 <script>
 import Chat from './views/Chat.vue'
 import ChatBot from './views/ChatBot.vue'
 import { ref } from 'vue'
-
 export default {
   name: 'App',
   components: {
@@ -34,9 +32,7 @@ export default {
   },  
   setup() {
     const visaChat = ref(true)
-
     return { visaChat }
-
   }
 }
 </script>
@@ -46,11 +42,9 @@ export default {
     font-weight: bold;
     cursor: pointer;
   }
-
   .toggle2{
     margin-left: 25%;
   }
-
   .app{
         text-align: center;
         padding: 20px 0;

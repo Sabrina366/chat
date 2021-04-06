@@ -21,13 +21,7 @@
 export default {
   data(){
     return{
-      
       text: '',
-      
-      
-      
-      
-      
     }
   },
   
@@ -37,66 +31,48 @@ export default {
       let pred = {
         sentence: this.text,
       };
-
       let res = await fetch("/rest/predict", {
         method: "POST",
         body: JSON.stringify(pred),
       });
-
       let prediction = await res.json();
-
       let newMessage = {
         text: this.text,
         timestamp: Date.now(),
         prediction: prediction
       }
-
       this.$store.commit("appendMessage", newMessage);
       console.log(prediction);
       this.text = ''
-      return prediction
-      
-
-      
+      return prediction 
     },
     
-  
-  
-    
-  
-  
-  
-  }
-
+  },
 }
 </script>
 
 <style scoped>
-form {
+/* form {
     margin: 10px;
     align-content: center;
-}
-
+} */
 textarea{
+    display: block;
     width: 90%;
     max-width: 960px;
-    margin: 80px 0 0px 24.5%;
+    min-width: auto;
+    margin-left: auto;
+    margin-right: auto;
     background: white;
     margin-bottom: 6px;
     margin-top: -8px;
-    padding: 10px;
+    padding-top: 10px;
     box-sizing: border-box;
     border: 0;
-    border-radius: 20px;
+    border-radius: 8px;
     font-family: inherit;
     outline: none;
 }
-
-
-
-
-
-
   /* form {
   max-width: 350px;
   display: grid;
