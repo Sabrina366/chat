@@ -2,13 +2,13 @@
     <div class="ChatWindow">
       <div class="messages" ref="mes">
         <span class="text">You: {{ message.text }}</span>
-        <span class="time">{{ new Date(message.timestamp).toString() }}</span>
+        <span class="time">{{ new Date(message.timestamp).toDateString() }}</span>
       </div>
       <br>
       <div v-if="displayBot" class="messages" ref="mes">
         
         <span>Bot: {{ message.prediction }}</span>
-        <span class="time">{{ new Date(message.timestamp).toString() }}</span>
+        <span class="time">{{ new Date(message.timestamp).toDateString() }}</span>
       
       </div>
     </div>

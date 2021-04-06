@@ -53,6 +53,7 @@ export default {
 
       this.$store.commit("appendMessage", newMessage);
       console.log(prediction);
+      this.text = ''
       return prediction
       
 
