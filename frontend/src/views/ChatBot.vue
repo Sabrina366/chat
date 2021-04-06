@@ -78,13 +78,14 @@ export default {
 			let prediction = await res.json();
 
 			let newMessage = {
-				text: this.text,
+				text: pred.sentence.toString(),
 				timestamp: Date.now(),
 				prediction: prediction,
 			};
 
 			this.$store.commit("appendMessage", newMessage);
 			this.startTxtToSpeech(prediction);
+			console.log(JSON.stringify(pred) )
 		},
 	},
 };
