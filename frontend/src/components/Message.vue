@@ -37,13 +37,12 @@ export default {
 
 <style >
  .ChatWindow{
-    background: #fafafa;
-    padding: 30px 20px;
-}
+    padding: 10px 20px;
+} 
 .messages{
   max-height: 300px;
   overflow: auto;
-}
+} 
 .time {
     display: block;
     color: #999;

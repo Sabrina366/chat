@@ -3,7 +3,7 @@
     <!-- <Nav/> -->
     <div v-if="visaChat" class="toggel-container">
     <Chat />
-     <p style="margin-left: 26%">Vill du tala med <span @click="visaChat = false" class="toggel"> boten?</span></p>
+     <p style="text-align: center;" >Vill du tala med <span @click="visaChat = false" class="toggel"> boten?</span></p>
     </div>
     <div v-else class="toggel-container">
     <ChatBot />

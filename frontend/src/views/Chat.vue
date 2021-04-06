@@ -46,17 +46,26 @@ export default {
   .input{
     margin: 10px;
   }
-  .h1-chat{
+/*   .h1-chat{
   background: #a0b2ec;
   color: #444;
-}
-.h1-chat{
+} */
+/* .h1-chat{
   width: 90%;
   overflow: auto;
   max-width: 960px;
   margin: 40px 25% -80px 25%;
   border-radius: 20px;
   box-shadow: 2px 4px 6px rgba(28, 6, 49, 0.1);
-  background: white;
+  --background: white;
+} */
+
+.h1-chat{
+  display: block;
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 1%;
+  font-size: 50px;
+  color: #3a241fc0;
 }
 </style>
