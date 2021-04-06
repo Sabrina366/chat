@@ -24,6 +24,17 @@ export default {
 
     }
   },
+  methods: {
+    scrollToElement() {
+    const el = this.$refs.mes;
+
+    if (el) {
+      // Use el.scrollIntoView() to instantly scroll to the element
+      el.scrollIntoView({behavior: 'smooth'});
+    }
+  }
+
+  },
 
   props: ['message'],
   
@@ -34,7 +45,9 @@ export default {
 
     }, 1000)
   },
-  
+  updated() {
+    this.scrollToElement();
+  }
     
 
 }
