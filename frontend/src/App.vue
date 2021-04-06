@@ -31,9 +31,7 @@ export default {
   },  
   setup() {
     const visaChat = ref(true)
-
     return { visaChat }
-
   }
 }
 </script>
@@ -43,11 +41,9 @@ export default {
     font-weight: bold;
     cursor: pointer;
   }
-
   .toggle2{
     margin-left: 25%;
   }
-
   .app{
         text-align: center;
         padding: 20px 0;

@@ -46,7 +46,7 @@ export default {
       return prediction 
     },
     
-  }
+  },
 }
 </script>
 
