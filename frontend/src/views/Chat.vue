@@ -1,7 +1,7 @@
 <template>
   <main>
     <div>
-    <h1 class="h1-chat">BOTITTUDE</h1>
+    <h1 class="h1-chat">BOTTITUDE</h1>
     <div class="message">
     <Message v-for="(m, index) of messages" :key="index" :message="m" />
     
