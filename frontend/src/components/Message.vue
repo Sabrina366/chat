@@ -1,13 +1,13 @@
 <template>
     <div class="ChatWindow">
       <div class="messages" ref="mes">
-        <span class="text">You: {{ message.text }}</span>
+        <span class="text"><img src="../assets/Avatar.png" width="15">: {{ message.text }}</span>
         <span class="time">{{ new Date(message.timestamp).toDateString() }}</span>
       </div>
       <br>
       <div v-if="displayBot" class="messages" ref="mes">
         
-        <span>Bot: {{ message.prediction }}</span>
+        <span> <img src="../assets/Vite App.png" width="15">: {{ message.prediction }}</span>
         <span class="time">{{ new Date(message.timestamp).toDateString() }}</span>
       
       </div>
@@ -29,7 +29,6 @@ export default {
     const el = this.$refs.mes;
 
     if (el) {
-      // Use el.scrollIntoView() to instantly scroll to the element
       el.scrollIntoView({behavior: 'smooth'});
     }
   }
@@ -49,7 +48,6 @@ export default {
     this.scrollToElement();
   }
     
-
 }
 </script>
 
@@ -67,4 +65,5 @@ export default {
     font-size: 12px;
     margin-bottom: 4px;
 }
+
 </style>

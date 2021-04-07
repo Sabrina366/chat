@@ -3,7 +3,7 @@
 
     <form>
       <textarea
-      placeholder="Skriv ditt meddelande och klicka enter för att skicka"
+      placeholder="Write your message and press enter to send it"
       v-model="text"
       
       @keypress.enter.prevent="predict"
@@ -52,10 +52,7 @@ export default {
 </script>
 
 <style scoped>
-/* form {
-    margin: 10px;
-    align-content: center;
-} */
+
 textarea{
     display: block;
     width: 90%;
@@ -73,29 +70,4 @@ textarea{
     font-family: inherit;
     outline: none;
 }
-  /* form {
-  max-width: 350px;
-  display: grid;
-  grid-template-columns: 80px 1fr 40px;
-  column-gap: 5px;
-  margin: auto;
-  }
-  input{
-    background-color: snow;
-    border-style: none;
-  }
-  .sender{
-    
-  }
-  .message{
-  
-  }
-  .send-btn{
-    font-family: sans-serif;
-    font-size: 15px;
-    width: 50px;
-    border-style: none;
-    background-color:silver;
-    border-radius: 5px;
-  } */
 </style>

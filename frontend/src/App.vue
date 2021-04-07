@@ -1,13 +1,12 @@
 <template>
   <div class="app-container">
-    <!-- <Nav/> -->
     <div v-if="visaChat" class="toggel-container">
     <Chat />
-     <p style="text-align: center;" >Vill du tala med <span @click="visaChat = false" class="toggel"> boten?</span></p>
+     <p style="text-align: center;" >Do you want to speak with the <span @click="visaChat = false" class="toggel"> bot?</span></p>
     </div>
     <div v-else class="toggel-container">
     <ChatBot />
-    <p style="margin-left: 40%">klicka här för att chatta med <span @click="visaChat = true" class="toggel">boten</span></p>
+    <p style="margin-left: 40%">click here if you want to chat with the  <span @click="visaChat = true" class="toggel">bot</span></p>
     </div>
   </div>
 </template>
@@ -19,7 +18,6 @@ import { ref } from 'vue'
 export default {
   name: 'App',
   components: {
-    // Nav,
     Chat,
     ChatBot,
     

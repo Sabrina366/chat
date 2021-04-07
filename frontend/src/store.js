@@ -2,16 +2,10 @@ import {createStore} from 'vuex'
 let ws;
 
 const state = {
-
-
   messages: [],
 
   prediction: []
-      
-
-    
-    
-    
+  
 }
 
 const mutations = {
@@ -27,8 +21,6 @@ const mutations = {
 
   },
   
-  
-  
 }
 
 const actions = {
@@ -41,15 +33,6 @@ const actions = {
       store.commit('loadMessages', messages)
     }
 
-    
-
-
-    
-    
-    
-    
-
-    
 }
 
 export default createStore({state, mutations, actions})
